@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin-help - Asistente Financiero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-green: #d1d9a1;
+            --light-green: #e9edc9;
+            --accent-green: #a3b18a;
+            --dark-blue: #1d2d50;
+            --text-color: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-green);
+            color: var(--text-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--bg-green);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50px;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-grow: 1;
+            padding: 0 5%;
+        }
+
+        .hero-text {
+            max-width: 400px;
+            z-index: 2;
+        }
+
+        .hero-text h3 {
+            font-weight: 300;
+            margin-bottom: 0;
+            color: var(--dark-blue);
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-style: italic;
+            margin: 0;
+            color: var(--dark-blue);
+        }
+
+        .hero-text p {
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .hero-image {
+            position: relative;
+            max-width: 500px;
+        }
+
+        /* El círculo decorativo de fondo */
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: #e2ebc0;
+            border-radius: 50%;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .btn-session {
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+            background-color: var(--accent-green);
+            padding: 12px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Section: Quienes Somos */
+        .about {
+            display: flex;
+            padding: 80px 10%;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            flex: 1;
+            background-color: #d8f3dc;
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-img img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content, .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <nav>
+            <a href="#">Página Principal</a>
+            <a href="#">Biblioteca Virtual</a>
+            <a href="#">Alcancía virtual</a>
+            <a href="#">Gráficas</a>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3>Asistente financiero</h3>
+                <h1>Fin-help</h1>
+                <p>"Organización y formación al alcance de tu mano"</p>
+            </div>
+            <div class="hero-image">
+                <!-- He puesto una imagen de marcador de posición, cámbiala por tu collage de recibos y cerdito -->
+                <img src="https://via.placeholder.com/400x500/transparent/333?text=Collage+Finanzas" alt="Fin-help Visual">
+            </div>
+        </div>
+
+        <a href="#" class="btn-session">Registro/iniciar sesión</a>
+    </section>
+
+    <section class="about">
+        <div class="about-img">
+            <!-- Imagen de la mano con celular y monedas -->
+            <img src="https://via.placeholder.com/300x400/transparent/333?text=App+Preview" alt="App interface">
+        </div>
+        <div class="about-text">
+            <h2>¿Quienes somos?</h2>
+            <p>
+                Fin-help, es una página web diseñada con el propósito de asistir a sus usuarios en la organización de sus finanzas personales a través de diferentes herramientas.
+            </p>
+            <p>
+                Contamos con ayudas como; Gráficos de organización, Foro de comunidad, alcancía virtual y una biblioteca de información sobre finanzas personales.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
