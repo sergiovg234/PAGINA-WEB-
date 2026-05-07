@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin-help - Asistente Financiero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-green: #d1d9a1;
+            --light-green: #e9edc9;
+            --accent-green: #a3b18a;
+            --dark-blue: #1d2d50;
+            --text-color: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-green);
+            color: var(--text-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--bg-green);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh; /* Aumentado para que respire más */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50px;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-around; /* Mejor distribución */
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            padding: 0 10%;
+        }
+
+        .hero-text {
+            max-width: 450px;
+            z-index: 2;
+        }
+
+        .hero-text h3 {
+            font-weight: 300;
+            margin-bottom: -10px;
+            color: var(--dark-blue);
+            font-size: 1.2rem;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            font-style: italic;
+            margin: 0;
+            color: var(--dark-blue);
+        }
+
+        .hero-text p {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .hero-image {
+            position: relative;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Círculo decorativo */
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background-color: #e2ebc0;
+            border-radius: 50%;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .btn-session {
+            align-self: flex-end; /* Lo mueve a la derecha */
+            margin-right: 5%;
+            margin-bottom: 20px;
+            background-color: rgba(29, 45, 80, 0.1); /* Estilo más parecido al botón de Canva */
+            padding: 10px 30px;
+            border: 1px solid var(--dark-blue);
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        .btn-session:hover {
+            background-color: var(--dark-blue);
+            color: white;
+        }
+
+        /* Section: Quienes Somos */
+        .about {
+            display: flex;
+            padding: 80px 10%;
+            gap: 50px;
+            align-items: center;
+            background-color: var(--light-green);
+        }
+
+        .about-img {
+            flex: 1;
+            background-color: #c4d9f2; /* Azul claro como en tu boceto */
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-img img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--dark-blue);
+        }
+
+        .about-text p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content, .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image { width: 100%; margin-top: 30px; }
+            .btn-session { align-self: center; margin-right: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <nav>
+            <a href="#">Página Principal</a>
+            <a href="#">Biblioteca Virtual</a>
+            <a href="#">Alcancía virtual</a>
+            <a href="#">Gráficas</a>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3>Asistente financiero</h3>
+                <h1>Fin-help</h1>
+                <p>"Organización y formación al alcance de tu mano"</p>
+            </div>
+            <div class="hero-image">
+                <img src="TU_URL_DE_IMAGEN_PRINCIPAL_AQUI.png" alt="Fin-help Visual">
+            </div>
+        </div>
+
+        <a href="#" class="btn-session">Registro/iniciar sesión</a>
+    </section>
+
+    <section class="about">
+        <div class="about-img">
+            <img src="TU_URL_DE_IMAGEN_CELULAR_AQUI.png" alt="App interface">
+        </div>
+        <div class="about-text">
+            <h2>¿Quienes somos?</h2>
+            <p>
+                Fin-help, es una página web diseñada con el propósito de asistir a sus usuarios en la organización de sus finanzas personales a través de diferentes herramientas.
+            </p>
+            <p>
+                Contamos con ayudas como; Gráficos de organización, Foro de comunidad, alcancía virtual y una biblioteca de información sobre finanzas personales.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
